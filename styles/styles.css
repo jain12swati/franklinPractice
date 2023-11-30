@@ -16,8 +16,12 @@
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
+  --black-background-color: #202020;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --text-color2: #202020;
+  --text-color3: #ebebeb;
+  --btn-color: #ffea00;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -38,7 +42,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 193px;
 
 }
 
@@ -90,7 +94,16 @@ h4, h5, h6 {
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
+h2 { font-size: var(--heading-font-size-l);
+ }
+
+ h2::after{
+  border-bottom: 2px solid var(--btn-color);
+  content: "";
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+ }
 h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
@@ -130,38 +143,41 @@ main pre {
 }
 
 a:any-link {
-  color: var(--link-color);
+  color: var(--black-background-color);
   text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
+  text-decoration: underline;  
 }
 
 /* buttons */
-a.button:any-link, button {
+/* a.button:any-link, button {
   font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
+ padding: 5px 30px;
+  
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
+  color: var(--text-color2);
+ background-color: var(--link-color);
+   margin: 16px 0; 
+white-space: nowrap; 
+overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
-}
+  border-radius: 30px; 
+  font-size: 18px;
+ 
+
+} */
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
+  /*background-color: var(--link-hover-color);*/
   cursor: pointer;
 }
 
@@ -247,5 +263,5 @@ main .section {
 
 /* section metadata */
 main .section.highlight {
-  background-color: var(--highlight-background-color);
+  /*background-color: var(--highlight-background-color);*/
 }

@@ -145,6 +145,8 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
 header nav .nav-brand img {
@@ -155,7 +157,7 @@ header nav .nav-brand img {
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
-  flex: 1 1 auto;
+  flex: 1 auto auto;
   display: none;
   visibility: hidden;
   background-color: var(--overlay-color);

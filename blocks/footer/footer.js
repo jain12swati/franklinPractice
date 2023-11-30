@@ -9,13 +9,23 @@ export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
   block.textContent = '';
 
+
+
   // load footer fragment
   const footerPath = footerMeta.footer || '/footer';
   const fragment = await loadFragment(footerPath);
 
-  // decorate footer DOM
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+ 
 
+  // decorate footer DOM
+  const footer = document.createElement('div');   
+  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  const classes = ['logo', 'nav', 'follow', 'disc'];
+  let f = footer.firstElementChild;
+  while (f && classes.length) {
+    f.classList.add(classes.shift());
+    f = f.nextElementSibling;
+  }
   block.append(footer);
+
 }
