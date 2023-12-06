@@ -116,7 +116,7 @@ main .forms {
     font-family: var(--body-font-family);
     background-color: var(--btn-color);
     color: var(--text-color2);
-    padding: 10px;
+    padding: 10px 15px;
     text-transform: uppercase;
     border: none;
     outline: none;

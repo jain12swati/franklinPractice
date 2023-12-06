@@ -55,6 +55,13 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+header nav a:any-link:hover{
+  background-color: var(--btn-color);
 }
 
 /* hamburger */
@@ -178,6 +185,7 @@ header nav .nav-sections ul  {
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+ 
 }
 
 header nav .nav-sections ul > li > ul {
