@@ -60,7 +60,15 @@ header nav a:any-link {
   text-transform: uppercase;
 }
 
-header nav a:any-link:hover{
+header nav a:any-link {
+  color: currentcolor;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+
+header nav ul li  a:hover{
   background-color: var(--btn-color);
 }
 
