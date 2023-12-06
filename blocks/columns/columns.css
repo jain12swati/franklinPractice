@@ -56,13 +56,15 @@
 .columns > div > .columns-img-col img {
   display: block;  
   object-fit: cover;
+  height: 380px;
 }
 
 @media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
+    height: 500px;
+   /* gap: 32px;*/
   }
 
   .columns > div > div {

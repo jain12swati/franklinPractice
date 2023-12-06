@@ -1,69 +1,70 @@
-main .form {
-    background-color: var(--color-white);
+main .forms {
+    background-color: var(--background-color);
     padding: var(--spacing-s);
     border-radius: var(--card-border-radius-l);
     filter: var(--image-filter-drop-shadow-small);
     border: solid 1px var(--bg-color-grey);
   }
   
-  main .form h2 {
+  main .forms h2 {
     padding: var(--spacing-s) 0;
-    font-size: var(--type-heading-l-lh);
+    font-size: var(--heading-font-size-l);
   }
   
-  main .form h3 {
+  main .forms h3 {
     padding-top: var(--spacing-s);
-    font-size: var(--type-heading-m-size);
+    font-size: var(--heading-font-size-m);
   }
   
-  main .form input,
-  main .form textarea,
-  main .form select {
-    border: solid 1px var(--bg-color-grey);
+  main .forms input,
+  main .forms textarea,
+  main .forms select {
+    border: solid 1px var(--black-background-color);
     padding: var(--spacing-xxs) var(--spacing-xs);
     width: 100%;
     max-width: 50rem;
     box-sizing: border-box;
     border-radius: var(--input-border-radius);
-    font-size: var(--type-body-s-size);
-    line-height: var(--type-body-s-lh);
+    font-size: var(--body-font-size-s);
+    line-height: var(--body-font-size-s);
     font-family: var(--body-font-family);
   }
   
-  main .form textarea {
+  main .forms textarea {
     min-height: 100px;
+   
   }
   
-  main .form input:hover,
-  main .form select:hover {
-    border-color: var(--color-font-grey);
+  main .forms input:hover,
+  main .forms select:hover {
+    border-color: var(--text-color2);
   }
   
-  main .form label {
+  main .forms label {
     display: block;
     padding-bottom: var(--spacing-xxs);
     box-sizing: border-box;
-    font-size: var(--type-body-s-size);
-    line-height: var(--type-body-s-lh);
+    font-size: var(--body-font-size-s);
+    line-height: var(--body-font-size-s);
   }
   
-  main .form label.required::after {
+  main .forms label.required::after {
     content: "*";
-    color: var(--color-black);
+    color: var(--text-color);
     padding-left: var(--spacing-xxxs);
   }
   
-  main .form .field-wrapper {
+  main .forms .field-wrapper {
     margin-bottom: var(--spacing-m);
   }
   
-  main .form .form-checkbox-wrapper {
+  main .forms .forms-checkbox-wrapper {
     display: flex;
     align-items: center;
     margin: var(--spacing-xs) 0;
   }
   
-  main .form .form-checkbox-wrapper input[type='checkbox'] {
+  main .forms .forms-checkbox-wrapper input[type='checkbox'] {
     appearance: none;
   
     /* stylelint-disable */
@@ -80,7 +81,7 @@ main .form {
     margin-left: 0;
   }
   
-  main .form .form-checkbox-wrapper input[type='checkbox']::after {
+  main .forms .forms-checkbox-wrapper input[type='checkbox']::after {
     display: block;
     position: absolute;
     top: 0;
@@ -92,39 +93,48 @@ main .form {
     background-size: contain;
   }
   
-  main .form .form-checkbox-wrapper input[type='checkbox']:checked::after {
+  main .forms .forms-checkbox-wrapper input[type='checkbox']:checked::after {
     background: url('./checkbox-checked.svg');
     background-size: contain;
     content: ' ';
   }
   
-  main .form .form-checkbox-wrapper label {
+  main .forms .forms-checkbox-wrapper label {
     display: block;
-    font-size: var(--type-body-xxs-size);
-    line-height: var(--type-body-xxs-lh);
+    font-size: var(--body-font-size-xs);
+    line-height: var(--body-font-size-xs);
     padding-bottom: 0;
   }
   
-  main .form-legal-wrapper p {
-    font-size: var(--type-body-xxs-size);
-    line-height: var(--type-body-xxs-lh);
+  main .forms-legal-wrapper p {
+    font-size: var(--body-font-size-xs);
+    line-height: var(--body-font-size-xs);
     font-style: italic;
   }
   
-  main .form button {
+  main .forms button {
     font-family: var(--body-font-family);
+    background-color: var(--btn-color);
+    color: var(--text-color2);
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    font-size: 20px;
+
+    
   }
   
   @media screen and (min-width: 900px) {
-    main .form {
+    main .forms {
       padding: var(--spacing-ml);
     }
     
-    main .form .field-wrapper {
+    main .forms .field-wrapper {
       display: flex;
     }
   
-    main .form label {
+    main .forms label {
       width: 72%;
     }
   }
