@@ -1,22 +1,20 @@
 /* fetching data for contributors */
- const contributorFile = "/contributors.json";
-const pageUrl = `/contributors.json`;
-let x = {};
+ const url = "/contributors.json";
+//const url = `https://main--franklinpractice--jain12swati.hlx.page/contributors.json`;
+/* let x = {};
 fetch(`${pageUrl}`)
-.then(x => x.text())
-.then(console.log("success", x)); 
+.then(response)
+.then(console.log("success", response));  */
 
-
-/* const pageUrl = `/contributors.json`;
-
- function getArtistsList() {
-  const response =  fetch(`${pageUrl}`);
-  //const results =  response.json();
-  const data = results.data;
-
-  console.log("success", data)
-
-  return data;
-}
-
-getArtistsList(); */
+fetch('url')
+  .then(response => {
+    //handle response            
+    console.log(response);
+  })
+  .then(data => {
+    //handle data
+    console.log(data);
+  })
+  .catch(error => {
+    //handle error
+  });
