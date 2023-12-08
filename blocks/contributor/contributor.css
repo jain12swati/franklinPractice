@@ -1,0 +1,16 @@
+.contributor-list{
+list-style-type: none;
+display: flex;
+}
+
+.contributor-list-item{
+    display: flex;
+    flex-direction: column;
+    width: 264px;
+}
+
+.contributor-picture img{
+    width: 164px;
+    height: 164px;
+    border-radius: 50%;
+}
