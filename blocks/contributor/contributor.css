@@ -1,16 +1,35 @@
 .contributor-list{
 list-style-type: none;
 display: flex;
+justify-content: space-between;
 }
 
 .contributor-list-item{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 264px;
+    color:#202020;
 }
 
 .contributor-picture img{
     width: 164px;
     height: 164px;
     border-radius: 50%;
+}
+
+.contributor-name{
+font-size: 24px;
+}
+
+.contirbutor-profile{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+.social-profile img{
+   width: 30px;
+   height: 30px;
+   padding: 0 10px;
 }

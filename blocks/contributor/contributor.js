@@ -26,8 +26,12 @@ export default async function decorate(block) {
         li.classList.add("contributor-list-item")
         li.innerHTML = `<div class="contributor-picture"><img src=${el.image_url}></div>
         <div class="contributor-name">${el.name}</div>
-        <div class="contirbutor-profile">${el.tags}</div>
-        <div class="social-profile">${el.facebook}</div>`;
+        <div class="contirbutor-profile">${(el.tags).split(",").join(" | ")}</div>
+        <div class="social-profile">
+        <a href="${el.facebook}"><img src="./icons/facebook.png"></a>
+        <a href="${el.twitter}"><img src="./icons/twitter.png"></a>
+        <a href="${el.instagram}"><img src="./icons/instagram.png"></a>
+        </div>`;
 
         ul.append(li);
     });   
