@@ -1,6 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 /* fetching data for contributors */
-const url = "/contributors.json";
+//const url = "/contributors.json";
+
 let jsonData = "";
 async function getJson(url) {
     let response = await fetch(url);
@@ -11,17 +12,19 @@ async function getJson(url) {
 
 
 export default async function decorate(block) {
-    jsonData = await getJson(url);    
-    console.log("after call", jsonData);
-
-    let contributorList = jsonData.contributor;
-
-    console.log("hi", contributorList);
- 
-    const ul = document.createElement('ul');
-    ul.classList.add("contributor-list");
+    const url = block.children?.[0]?.children?.[0]?.textContent ;
+    console.log("my url", url);
+  //  jsonData = await getJson(url); 
+ //  fetch(url).then(x => x.text());
+   // let data =  response.json()   
+   // console.log("after call", response);
+   const ul = document.createElement('ul');
+   try {
+     const response = await fetch(url);
+     const {data = []} = await response.json(); 
+      ul.classList.add("contributor-list");
    
-    (contributorList.data).forEach(el => {
+    data.forEach(el => {
         const li = document.createElement('li');
         li.classList.add("contributor-list-item")
         li.innerHTML = `<div class="contributor-picture"><img src=${el.image_url}></div>
@@ -34,8 +37,13 @@ export default async function decorate(block) {
         </div>`;
 
         ul.append(li);
-    });   
+      });   
+   } catch {
+
+   }
+ 
+    
    
-       block.textContent = '';
-       block.append(ul);
+       block.innerHTML = '';
+       block.appendChild(ul);
 }
